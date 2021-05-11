@@ -1,0 +1,79 @@
+A-Frame
+<script src="https://aframe.io/releases/0.6.0/aframe.min.js"> </script>
+● AR.js
+<script
+src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"
+></script>
+● jQuery
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+● Bootstrap
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJ
+lSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+<link
+href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+rel="stylesheet"
+id="bootstrap-css"
+/>
+<script
+src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+● SweetAlert
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+● Gesture Detection (for Scale and Rotation)
+<script
+src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script
+>
+● Local StyleSheet
+<link href="./style.css" rel="stylesheet" />
+
+
+
+● Local JavaScript Files
+<script src="./js/addButtons.js"></script>
+<script src="./js/markerhandler.js"></script>
+<script src="./js/addMarkers.js"></script>
+<script src="./js/star.js"></script>
+_generateRating: function() {
+        var a,
+          n,
+          r,
+          i = this,
+          l = i.$element;
+        (n = i.$container = e(document.createElement("div")).insertBefore(l)),
+          t.addCss(n, i._getContainerCss()),
+          (i.$rating = a = e(document.createElement("div"))
+            .attr("class", "rating-stars")
+            .appendTo(n)
+            .append(i._getStars("empty"))
+            .append(i._getStars("filled"))),
+          (i.$emptyStars = a.find(".empty-stars")),
+          (i.$filledStars = a.find(".filled-stars")),
+          i._renderCaption(),
+          i._renderClear(),
+          i._initHighlight(),
+          n.append(l),
+          i.rtl &&
+            ((r = Math.max(
+              i.$emptyStars.outerWidth(),
+              i.$filledStars.outerWidth()
+            )),
+            i.$emptyStars.width(r)),
+          l.appendTo(a);
+ handleRatings: async function (dish) 
+ ratingButton.addEventListener("click", () => this.handleRatings(dish));
+var ratingPlane = document.createElement("a-entity");
+        ratingPlane.setAttribute("id", `rating-plane-${dish.id}`);
+        ratingPlane.setAttribute("position", { x: 2, y: 0, z: 0.5 });
+        ratingPlane.setAttribute("geometry", {
+          primitive: "plane",
+          width: 1.5,
+          height: 0.3
+        });
+
+        ratingPlane.setAttribute("material", {
+          color: "#F0C30F"
+        });
+        ratingPlane.setAttribute("rotation", { x: -90, y: 0, z: 0 });
+        ratingPlane.setAttribute("visible", false);
+
